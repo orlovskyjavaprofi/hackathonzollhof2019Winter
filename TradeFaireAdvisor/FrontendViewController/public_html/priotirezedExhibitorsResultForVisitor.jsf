@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="priotirezedExhibitorsResultForVisitor.jsf" id="d1">
+    <af:form id="f1" usesUpload="true">
+      <af:panelGridLayout id="pgl1">
+        <af:gridRow height="50px" id="gr2">
+          <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+            <af:outputText id="outputTextTraideFairAdvisor"
+                         value="Trade fair advisor (THIS IS A PROTOTYPE MADE BY ORLOVSKY)"
+                         inlineStyle="font-size:xx-large; vertical-align:baseline; text-align:center;"/>
+            <af:menuBar id="menubarForVisitorPrioExhibitorsList">
+              <af:commandMenuItem text="List or search for exhibitors" id="cmdMenuItemListAndSearchForExhibitors"
+                                  inlineStyle="font-size:large; text-decoration-line: underline;"
+                                  action="VisitorRequestListOfPrioExhibitors"/>
+              <af:commandMenuItem text="List of public events" id="cmdMenuItemListOfPublicEvents"
+                                  inlineStyle="font-size:large; text-decoration-line: underline;"
+                                  action="VisitorRequestListOfPublicEvents"/>
+              <af:commandMenuItem text="List of visitor bookmarked public events"
+                                  id="cmdMenuItemVisitorSelectedPublicEvents"
+                                  inlineStyle="font-size:large; text-decoration-line: underline;"
+                                  action="VisitorRequestListOfBookmarkedEvents"/>
+            </af:menuBar>
+          </af:gridCell>
+        </af:gridRow>
+        <af:gridRow height="100%" id="gr1">
+          <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+            <af:panelSplitter orientation="horizontal" splitterPosition="292" positionedFromEnd="true" id="ps1">
+              <f:facet name="first">
+                <!-- Content -->
+                <af:panelGridLayout id="pgl2">
+                  <af:gridRow marginTop="10px" height="auto" marginBottom="5px" id="gr7">
+                    <af:gridCell marginStart="10px" width="100%" marginEnd="10px" id="gc7"/>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr3">
+                    <af:gridCell marginStart="10px" width="100%" marginEnd="10px" id="gc3"/>
+                  </af:gridRow>
+                  <af:gridRow marginTop="10px" height="auto" id="gr4">
+                    <af:gridCell marginStart="10px" width="100%" marginEnd="10px" id="gc4">
+                      <af:panelFormLayout id="pfl1">
+                        <f:facet name="footer"/>
+                        <af:outputText value="3Jd Unverpackt Solutions GmbH Prio: 1" id="ot1" inlineStyle="font-size:large;"/>
+                        <af:outputText value="Halle 8 , Messe: BIOFACH , Booth number: 8-414 " id="ot2" inlineStyle="font-size:large;"/>
+                        <af:link text="Visitor personal note about exhibitor." id="l1" inlineStyle="font-size:large;"/>
+                        <af:link text="Request more information about products." id="l2" inlineStyle="font-size:large;"/>
+                      </af:panelFormLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="10px" height="auto" marginBottom="5px" id="gr5">
+                    <af:gridCell marginStart="10px" width="100%" marginEnd="10px" id="gc5">
+                      <af:panelFormLayout id="pfl2">
+                        <f:facet name="footer"/>
+                        <af:outputText value="A.D CHINI S.R.L. Prio: 2" id="ot3"
+                                       inlineStyle="font-size:large;"/>
+                        <af:outputText value="Halle 4 , Messe: BIOFACH , Booth number: 4-141 " id="ot4"
+                                       inlineStyle="font-size:large;"/>
+                        <af:link text="Visitor personal note about exhibitor." id="l3" inlineStyle="font-size:large;"/>
+                        <af:link text="Request more information about products." id="l4"
+                                 inlineStyle="font-size:large;"/>
+                      </af:panelFormLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="10px" height="auto" marginBottom="5px" id="gr6">
+                    <af:gridCell marginStart="10px" width="100%" marginEnd="10px"  id="gc6">
+                      <af:panelFormLayout id="pfl3">
+                        <f:facet name="footer"/>
+                        <af:outputText value="ACAI GmbH Fine Fruits Club Prio: 3" id="ot5"
+                                       inlineStyle="font-size:large;"/>
+                        <af:outputText value="Halle 7A , Messe: BIOFACH , Booth number: 7A-700 " id="ot6"
+                                       inlineStyle="font-size:large;"/>
+                        <af:link text="Visitor personal note about exhibitor." id="l5" inlineStyle="font-size:large;"/>
+                        <af:link text="Request more information about products." id="l6"
+                                 inlineStyle="font-size:large;"/>
+                      </af:panelFormLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </f:facet>
+              <f:facet name="second">
+                <!-- Right -->
+                <af:panelGridLayout id="pgl3">
+                  <af:gridRow marginTop="5px" height="auto" id="gr8">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
+                      <af:outputText value="Exhibitors" id="outputTextExhibitorsList"
+                                     inlineStyle="font-size:large; margin-right:0px;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr9">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9">
+                      <af:inputText id="it1" value="... type exhibitor name" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr10">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10"/>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11">
+                      <af:outputText value="+ALOE CANARIAS" id="ot7" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr12">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc12">
+                      <af:outputText value="3JD Unverpackt Solutions GmbH" id="ot8" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr13">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13">
+                      <af:outputText value="A'RICCHIGIA Srl" id="ot9" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr14">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14">
+                      <af:outputText value="A. Kuster SIROCCO AG" id="ot10" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr15">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc15">
+                      <af:outputText value="A.D. CHINI S.R.L." id="ot11" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr16">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16">
+                      <af:outputText value="Agricoltori Biologici" id="ot12" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr17">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc17">
+                      <af:outputText value="ACAI GmbH Fine Fruits Club" id="ot13" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr18">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc18">
+                      <af:outputText value="AcanChia UG &amp; Co.KG" id="ot14" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr19">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc19">
+                      <af:outputText value="ACETIFICIO CARANDINI EMILIO SPA" id="ot15" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr20">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc20">
+                      <af:outputText value="Acetificio Mengazzoli" id="ot16" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr21">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc21">
+                      <af:outputText value="ACL Reis Company GmbH" id="ot17" inlineStyle="font-size:large;"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </f:facet>
+            </af:panelSplitter>
+          </af:gridCell>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </af:form>
+  </af:document>
+</f:view>

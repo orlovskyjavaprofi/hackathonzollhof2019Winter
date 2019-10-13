@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="MainInterests.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                         <af:outputText id="outputTextTraideFairAdvisor"
+                         value="Trade fair advisor (THIS IS A PROTOTYPE MADE BY ORLOVSKY)"
+                         inlineStyle="font-size:xx-large; vertical-align:baseline; text-align:center;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Content -->
+                        <af:panelStretchLayout id="psl1">
+                            <f:facet name="start"/>
+                            <f:facet name="end"/>
+                            <f:facet name="top">
+                                <af:outputText value="Choose your areas of interests:" id="outputTextRequestForSelectionOfInterests"
+                                               inlineStyle="font-size:large; margin-left:20px;"/>
+                            </f:facet>
+                            <f:facet name="bottom"/>
+                            <f:facet name="center">
+                                <af:panelGridLayout id="pgl2" inlineStyle="margin-left:50px;">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                        <af:gridCell marginStart="5px" width="50%" id="gc3">
+                                            <af:selectBooleanCheckbox text="Frischprodukte"
+                                                                      id="sbc1"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4">
+                                            <af:selectBooleanCheckbox text="Non-Food"
+                                                                      id="sbc6"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                        <af:gridCell marginStart="5px" width="50%" id="gc5">
+                                            <af:selectBooleanCheckbox text="Tiefkühlprodukte"
+                                                                      id="sbc2"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc6">
+                                            <af:selectBooleanCheckbox text="Technik und Ausstattung"
+                                                                      id="sbc7"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                        <af:gridCell marginStart="5px" width="50%" id="gc7">
+                                            <af:selectBooleanCheckbox text="Trockenprodukte Kochen und Backen"
+                                                                      id="sbc3"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc8">
+                                            <af:selectBooleanCheckbox text="Roh-, Hilfsstoffe"
+                                                                      id="sbc8"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" id="gr6">
+                                        <af:gridCell marginStart="5px" width="50%" id="gc9">
+                                            <af:selectBooleanCheckbox text="Trockenprodukte Getränke"
+                                                                      id="sbc4"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc10">
+                                            <af:selectBooleanCheckbox text="Medien, Dienstleister"
+                                                                      id="sbc9"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr7">
+                                        <af:gridCell marginStart="5px" width="50%" id="gc11">
+                                            <af:selectBooleanCheckbox text="Weitere Trockenprodukte"
+                                                                      id="sbc5"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc12">
+                                            <af:selectBooleanCheckbox text="Import Waren"
+                                                                      id="sbc10"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr8">
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc13">
+                                            <af:panelFormLayout id="pfl1">
+                                                <f:facet name="footer"/>
+                                                <af:outputText value="Don't found areas of interest which you like?"
+                                                               id="outputTextForOtherIntersts"
+                                                               inlineStyle="font-size:large;"/>
+                                                <af:link text="Please choose more from general areas of interests"
+                                                         id="webLinkToMoreGeneralSelection"
+                                                         inlineStyle="font-size:large;"
+                                                         action="VisitorRequestedForSecondaryInterests"/>
+                                            </af:panelFormLayout>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc16"/>
+                                    </af:gridRow>
+                                    <af:gridRow id="gr10">
+                                        <af:gridCell id="gc17" width="50%"/>
+                                        <af:gridCell id="gc18" width="50%"/>
+                                    </af:gridRow>
+                                    <af:gridRow id="gr11">
+                                        <af:gridCell id="gc19" width="50%"/>
+                                        <af:gridCell id="gc20" width="50%"/>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr9">
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc14">
+                                            <af:button text="Reset form" id="buttonResetFormForMainInterests"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc15">
+                                            <af:button text="Submit your selection" id="buttonSubmitVisitorGeneralInterests"
+                                                       action="VisitorChoosenMainInterests"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
+                            </f:facet>
+                        </af:panelStretchLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>

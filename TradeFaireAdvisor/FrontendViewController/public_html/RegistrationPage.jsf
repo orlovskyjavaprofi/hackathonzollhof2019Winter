@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="RegistrationPage.jsf" id="d1">
+    <af:form id="f1">
+      <af:panelStretchLayout id="psl1" topHeight="51px">
+        <f:facet name="start"/>
+        <f:facet name="end"/>
+        <f:facet name="top">
+          <af:outputText id="outputTextTraideFairAdvisor"
+                         value="Trade fair advisor (THIS IS A PROTOTYPE MADE BY ORLOVSKY)"
+                         inlineStyle="font-size:xx-large; vertical-align:baseline; text-align:center;"/>
+        </f:facet>
+        <f:facet name="bottom">
+          <af:panelBorderLayout id="pbl1">
+            <f:facet name="top"/>
+            <f:facet name="bottom"/>
+            <f:facet name="start"/>
+            <f:facet name="end"/>
+            <f:facet name="left">
+              <af:button text="Reset this form" id="b1" inlineStyle="margin-right:20px; margin-left:20px;"/>
+            </f:facet>
+            <f:facet name="right">
+              <af:button text="Register" id="b2" action="RegistrationOk"/>
+            </f:facet>
+          </af:panelBorderLayout>
+        </f:facet>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl1">
+            <af:gridRow id="gr7">
+              <af:gridCell marginStart="5px" width="30%" id="gc13"/>
+              <af:gridCell  marginStart="5px" width="50%" marginEnd="5px" id="gc14"/>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" id="gr1">
+              <af:gridCell marginStart="5px" width="30%" id="gc1">
+                <af:panelFormLayout id="panelFormLayoutForVisitorFirstName" rows="1" maxColumns="2">
+                  <af:outputText value="Visitor first name" id="outputTextVisitorFirstName"
+                                 inlineStyle="font-size:medium;"/>
+                </af:panelFormLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2">
+                <af:inputText id="inputTextForVisitorFirstName" inlineStyle="font-size:large;"/>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" id="gr2">
+              <af:gridCell marginStart="5px" width="30%" id="gc3">
+                <af:panelFormLayout id="panelFormLayoutForVisitorLastName" rows="1" maxColumns="2">
+                  <af:outputText value="Visitor last name" id="outputTextVisitorLastName"
+                                 inlineStyle="font-size:medium;"/>
+                </af:panelFormLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4">
+                <af:inputText id="inputTextForVisitorLastName" inlineStyle="font-size:large;"/>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" id="gr3">
+              <af:gridCell marginStart="5px" width="30%" id="gc5">
+                <af:panelFormLayout id="panelFormForVisitorEmail" rows="1" maxColumns="2">
+                  <f:facet name="footer"/>
+                  <af:outputText value="Visitor email" id="outputTextVisitorEmail" inlineStyle="font-size:medium;"/>
+                </af:panelFormLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc6">
+                <af:inputText id="inputTextVisitorEmail" inlineStyle="font-size:large; margin-left:auto;"/>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" id="gr4">
+              <af:gridCell marginStart="5px" width="30%" id="gc7">
+                <af:panelFormLayout id="panelFormForVisitorPhoneNumber" rows="1">
+                  <f:facet name="footer">
+                    <af:outputFormatted value="(Country code tel number e.g. 00441234567)" id="of1"
+                                        inlineStyle="font-size:medium;"/>
+                  </f:facet>
+                  <af:outputText id="outputTextVisitorTelNumber" inlineStyle="font-size:medium;"
+                                 value="Visitor phone number"/>
+                </af:panelFormLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc8">
+                <af:inputText id="inputTextForVisitorTelNumber" inlineStyle="font-size:large; margin-left:auto;"/>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+              <af:gridCell marginStart="5px" width="30%" id="gc9">
+                <af:panelFormLayout id="pfl2" rows="1" maxColumns="2">
+                  <f:facet name="footer"/>
+                  <af:outputText value="Visitor registration day (Day.Month.Year)" inlineStyle="font-size:medium;"
+                                 id="outputTextVisitorRegDay"/>
+                </af:panelFormLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc10">
+                <af:inputText id="inputTextVisitorRegDay"/>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+              <af:gridCell marginStart="5px" width="30%" id="gc11">
+                <af:panelFormLayout id="pfl1" rows="1" maxColumns="2">
+                  <f:facet name="footer"/>
+                  <af:selectBooleanCheckbox text=" DSGVO agreement (check this for registration)" id="chekcBoxForDsgvo"
+                                            inlineStyle="font-size:large;"/>
+                </af:panelFormLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="50%"  id="gc12"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:panelStretchLayout>
+    </af:form>
+  </af:document>
+</f:view>

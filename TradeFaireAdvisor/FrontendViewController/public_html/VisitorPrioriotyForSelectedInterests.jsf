@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="VisitorPrioriotyForSelectedInterests.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr3">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <af:outputText id="outputTextTraideFairAdvisor"
+                         value="Trade fair advisor (THIS IS A PROTOTYPE MADE BY ORLOVSKY)"
+                         inlineStyle="font-size:xx-large; vertical-align:baseline; text-align:center;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc3">
+                        <!-- Content -->
+                        <af:panelGridLayout id="pgl2">
+                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                <af:gridCell marginStart="5px" width="50%" id="gc4">
+                                    <af:outputText value="Prioritize your areas of interests:" id="outerTextpPrioForVisitor"
+                                                   inlineStyle="font-size:large;"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc5">
+                                    <af:outputText value="1 - low interest" id="outputTextVisitorLowPrio"
+                                                   inlineStyle="font-size:large;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                <af:gridCell marginStart="5px" width="50%" id="gc6"/>
+                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc7">
+                                    <af:outputText value="2 - medium interest" id="outputTextMediumVisitorPrio" inlineStyle="font-size:large;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr6">
+                                <af:gridCell marginStart="5px" width="50%" id="gc8"/>
+                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc9">
+                                    <af:outputText value="3 - high interest" id="outputTextForHighInterests" inlineStyle="font-size:large;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr7">
+                                <af:gridCell marginStart="5px" width="50%" id="gc10"/>
+                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc11"/>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr8">
+                                <af:gridCell marginStart="5px" width="50%" id="gc12">
+                                    <af:outputText value="Visitor selected interests:"
+                                                   id="outerTextForVisitorSelectedInterests"
+                                                   inlineStyle="font-size:large;"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc13"/>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr9">
+                                <af:gridCell marginStart="5px" width="50%" id="gc14"/>
+                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc15"/>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr10">
+                                <af:gridCell marginStart="5px" width="50%" id="gc16">
+                                    <af:inputText label="Frischprodukte" id="it1" value="1"
+                                                  inlineStyle="font-size:medium;"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc17">
+                                    <af:inputText label="Roh Hilfsstoffe" id="it3" value="1"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr11">
+                                <af:gridCell marginStart="5px" width="50%" id="gc18">
+                                    <af:inputText label="Tiefkühlprodukte" id="it2" value="2"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="50%" id="gc19">
+                                    <af:inputText label="Medien, Dienstleister" id="it4" value="2"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr12">
+                                <af:gridCell marginStart="5px" width="50%" id="gc20">
+                                    <af:inputText label="Non food" id="it5" value="1"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="50%" id="gc21">
+                                    <af:inputText label="Technik und Austattung" id="it6" value="2"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow id="gr14">
+                                <af:gridCell id="gc24"/>
+                                <af:gridCell id="gc25"/>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr13">
+                                <af:gridCell marginStart="5px" width="50%" id="gc22">
+                                    <af:panelFormLayout id="panelFormLayoutForVisotorPrioForm" rows="1" maxColumns="2">
+                                        <f:facet name="footer"/>
+                                        <af:button text="Reset form" id="buttonResetVisitorPrioForm"
+                                                   inlineStyle="margin-left:20px;"/>
+                                        <af:button text="Submit prioritized interests"
+                                                   id="buttonVisitorSendsPrioInterests"
+                                                   inlineStyle="margin-left:20px;"
+                                                   action="VisitorSendPrioListOfInterests"/>
+                                    </af:panelFormLayout>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="50%" id="gc23"/>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="50px" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Footer -->
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>
